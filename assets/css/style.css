@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 3rem;
+  padding: 0 2rem;
+  font-size: .95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgb(0, 125, 20);
+}
+
+.global-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.global-menu > li:not(:first-of-type) {
+  margin-left: 2rem;
+}
