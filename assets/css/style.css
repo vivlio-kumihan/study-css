@@ -15,21 +15,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #eee;
+  height: 60vh;
 }
 
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.awesome {
+  position: relative;
 
-  width: 20rem;
-  height: 20rem;
-  background-color: aliceblue;
-  border: 1rem solid #999;
+  padding-left: 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform:capitalize
 }
 
-.box:not(:first-of-type) {
-  margin-top: 2rem;
+.awesome::before {
+  position: absolute;
+
+  top: -.3rem;
+  left: 0;
+
+  content: '\f53f';
+
+  margin-right: .5rem;
+  font-size: 2rem;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: rgb(255, 185, 0);
 }
