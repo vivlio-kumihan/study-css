@@ -13,32 +13,63 @@
 </head>
 <body>
   <div class="container">
-    <form action="" method="post" name="contact">
+    <form action="" method="post" name="about-checkbox">
       <dl>
-        <dt>name</dt>
-        <dd><input type="text"></dd>
-        <dt>age</dt>
-        <dd><input type="number"></dd>
-        <dt>tel</dt>
-        <dd><input type="tel"></dd>
-        <dt>e-mail</dt>
-        <dd><input type="email"></dd>
-        <dt>password</dt>
-        <dd><input type="password"></dd>
-        <dt>search</dt>
-        <dd><input type="search"></dd>
-        <dt>file</dt>
-        <dd><input type="file"></dd>
-        <dt>range</dt>
-        <dd><input type="range"></dd>
-        <dt>hidden</dt>
-        <dd><input type="hidden"></dd>
-        <dt>date</dt>
-        <dd><input type="date"></dd>
-        <dt>color</dt>
-        <dd><input type="color"></dd>
+        <dt>興味のある言語を選択してください。</dt>
+        <dd>
+          <ul>
+            <li>
+              <input type="checkbox" name="interest" id="html" value="html" checked>
+              <label for="html">HTML</label> 
+            </li>
+            <li>
+              <input type="checkbox" name="interest" id="css" value="css">
+              <label for="css">CSS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="interest" id="js" value="js">
+              <label for="js">JavaScript</label>
+            </li>
+          </ul>
+        </dd>
+
+        <dt>習得した言語を選択してください。</dt>
+        <dd>
+          <ul>
+            <li>
+              <input type="checkbox" name="learned" id="html" value="html" checked>
+              <label for="html">HTML</label> 
+            </li>
+            <li>
+              <input type="checkbox" name="learned" id="css" value="css">
+              <label for="css">CSS</label>
+            </li>
+            <li>
+              <input type="checkbox" name="learned" id="js" value="js">
+              <label for="js">JavaScript</label>
+            </li>
+          </ul>
+        </dd>
+
+        <dt>希望する年収を教えてください。</dt>
+        <dd>
+          <ul>
+            <li>
+              <input type="radio" name="annual" id="300" value="300">
+              <label for="300">300万円〜</label>
+            </li>
+            <li>
+              <input type="radio" name="annual" id="400" value="400">
+              <label for="400">400万円〜</label>
+            </li>
+            <li>
+              <input type="radio" name="annual" id="500" value="500">
+              <label for="500">500万円〜</label>
+            </li>
+          </ul>
+        </dd>
+        <button submit="送信">送信する</button>
       </dl>
-      <button type="submit" value="送信　">送信</button>
     </form>
   </div>
 </body>
