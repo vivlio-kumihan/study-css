@@ -13,63 +13,21 @@
 </head>
 <body>
   <div class="container">
-    <form action="" method="post" name="about-checkbox">
-      <dl>
-        <dt>興味のある言語を選択してください。</dt>
-        <dd>
-          <ul>
-            <li>
-              <input type="checkbox" name="interest" id="html" value="html" checked>
-              <label for="html">HTML</label> 
-            </li>
-            <li>
-              <input type="checkbox" name="interest" id="css" value="css">
-              <label for="css">CSS</label>
-            </li>
-            <li>
-              <input type="checkbox" name="interest" id="js" value="js">
-              <label for="js">JavaScript</label>
-            </li>
-          </ul>
-        </dd>
-
-        <dt>習得した言語を選択してください。</dt>
-        <dd>
-          <ul>
-            <li>
-              <input type="checkbox" name="learned" id="html" value="html" checked>
-              <label for="html">HTML</label> 
-            </li>
-            <li>
-              <input type="checkbox" name="learned" id="css" value="css">
-              <label for="css">CSS</label>
-            </li>
-            <li>
-              <input type="checkbox" name="learned" id="js" value="js">
-              <label for="js">JavaScript</label>
-            </li>
-          </ul>
-        </dd>
-
-        <dt>希望する年収を教えてください。</dt>
-        <dd>
-          <ul>
-            <li>
-              <input type="radio" name="annual" id="300" value="300">
-              <label for="300">300万円〜</label>
-            </li>
-            <li>
-              <input type="radio" name="annual" id="400" value="400">
-              <label for="400">400万円〜</label>
-            </li>
-            <li>
-              <input type="radio" name="annual" id="500" value="500">
-              <label for="500">500万円〜</label>
-            </li>
-          </ul>
-        </dd>
-        <button submit="送信">送信する</button>
-      </dl>
+    <div class="box">width: 132.5px;</div>
+    <form action="" method="post" name="">
+      <div class="select-wrapper">
+        <select name="lang" id="">
+          <optgroup label="front-end">
+            <option value="HTML">HTML</option>
+            <option value="CSS" selected>CSS</option>
+            <option value="JavaScript">JavaScript</option>
+          </optgroup>
+          <optgroup label="back-end">
+            <option value="Python" selected>Python</option>
+            <option value="PHP">PHP</option>
+          </optgroup>
+        </select>
+      </div>
     </form>
   </div>
 </body>
