@@ -12,45 +12,47 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
   height: 100vh;
-  margin: 0 auto;
 }
 
-form {
-  width: 100%;
-  padding: 2rem;
+.box {
+  width: 15rem;
+  height: 1rem;
   background-color: #eee;
 }
 
-dt {
-  margin-bottom: .5rem;
+.select-wrapper {
+  position: relative;
 }
 
-dt:not(:first-of-type) {
-  margin-top: 1rem;
-}
-
-input, textarea {
-  padding: 1rem;
-  background-color: #fff;
+select {
+  appearance: none;
+  
+  width: 15rem;
+  padding: .5rem 1rem;
+  background-color: #eee;
+  border: 1px solid #777;
   border-radius: .3rem;
 }
 
-input {
-  width: 100%;
+select:focus-visible {
+  border: none;
+  /* FireFoxでは設定できない。 */
+  /* Chrome用 */
+  /* デフォルトの青線をやめて、クリックする前の線のままにする。 */
+  outline: 1px solid #777;
 }
 
-textarea {
-  width: 100%;
-  height: calc(1rem * 1.5 * 10);
-  resize: vertical;
-}
+.select-wrapper::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
 
-input:focus-visible,
-textarea:focus-visible {
-  outline: none;
-  box-shadow: 0 0 .5rem #ddd;
+  content: "▼";
+  pointer-events: none;
+  font-size: .8rem;
 }
