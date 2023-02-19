@@ -13,21 +13,16 @@
 </head>
 <body>
   <div class="container">
-    <div class="box"></div>
-    <form action="" method="post" name="">
-      <div class="select-wrapper">
-        <select name="lang" id="">
-          <optgroup label="front-end">
-            <option value="HTML">HTML</option>
-            <option value="CSS" selected>CSS</option>
-            <option value="JavaScript">JavaScript</option>
-          </optgroup>
-          <optgroup label="back-end">
-            <option value="Python" selected>Python</option>
-            <option value="PHP">PHP</option>
-          </optgroup>
-        </select>
-      </div>
+    <form action="" method="post">
+      <dl>
+        <dt><label for="name">お名前</label></dt>
+        <dd><input type="text" id="name" required placeholder="例）徳川家康"></dd>
+        <dt><label for="age">年齢</label></dt>
+        <dd><input type="number" id="age" required value="22"></dd>
+        <dt><label for="opinion">ご意見</label></dt>
+        <dd><textarea id="opinion" required placeholder="こちらにご記入ください。"></textarea></dd>
+      </dl>
+      <button type="submit">送信</button>
     </form>
 
   </div>

@@ -11,48 +11,49 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
-
-.box {
-  width: 15rem;
-  height: 1rem;
+  height: 100vh; */
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
   background-color: #eee;
 }
 
-.select-wrapper {
-  position: relative;
-}
-
-select {
-  appearance: none;
+dt {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
   
-  width: 15rem;
-  padding: .5rem 1rem;
-  background-color: #eee;
-  border: 1px solid #777;
+}
+dt:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
   border-radius: .3rem;
 }
 
-select:focus-visible {
-  border: none;
-  /* FireFoxでは設定できない。 */
-  /* Chrome用 */
-  /* デフォルトの青線をやめて、クリックする前の線のままにする。 */
-  outline: 1px solid #777;
+textarea {
+  resize: vertical;
 }
 
-.select-wrapper::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 1rem;
+button {
+  display: block;
 
-  content: "▼";
-  pointer-events: none;
-  font-size: .8rem;
+  margin: 1rem auto 0;
+  padding: .5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #777;
+  border-radius: .3rem;
 }
+
+
+
