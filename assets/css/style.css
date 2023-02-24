@@ -18,5 +18,17 @@ body {
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
+  font-size: 1.2rem;
   background-color: #eee;
+}
+
+dt {
+  margin-bottom: .5rem;
+}
+dt:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+input:not(:first-of-type) {
+  margin-left: 1rem;
 }
