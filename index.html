@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,21 +12,43 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <script src="./assets/js/behavior.js" defer></script>
 </head>
+
 <body>
   <div class="container">
-    <form action="" method="post">
-      <dl>
-        <dt><label for="name">お名前</label></dt>
-        <dd><input type="text" id="name" required placeholder="例）徳川家康"></dd>
-        <dt><label for="age">年齢</label></dt>
-        <dd><input type="number" id="age" required value="22"></dd>
-        <dt><label for="opinion">ご意見</label></dt>
-        <dd><textarea id="opinion" required placeholder="こちらにご記入ください。"></textarea></dd>
-      </dl>
-      <button type="submit">送信</button>
-    </form>
-
+    <dl>
+      <dt>WEB Applications</dt>
+      <dd>
+        <input type="checkbox" id="html">
+        <label for="html">HTML</label>
+      </dd>
+      <dd>
+        <input type="checkbox" id="css">
+        <label for="css">CSS</label>
+      </dd>
+      <dd>
+        <input type="checkbox" id="js">
+        <label for="js">JavaScript</label>
+      </dd>
+    </dl>
+    <dl>
+      <dt>JavaScript FlameWorks</dt>
+      <dd>
+        <input type="radio" id="vue" name="radio">
+        <label for="vue">Vue.js</label>
+      </dd>
+      <dd>
+        <input type="radio" id="nuxt" name="radio">
+        <label for="nuxt">Nuxt.js</label>
+      </dd>
+      <dd>
+        <input type="radio" id="react" name="radio">
+        <label for="react">React.js</label>
+      </dd>
+      <dd>
+        <input type="radio" id="next" name="radio">
+        <label for="next">Next.js</label>
+      </dd>
+    </dl>
   </div>
 </body>
 </html>
-

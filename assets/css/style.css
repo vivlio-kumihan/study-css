@@ -11,49 +11,97 @@ body {
 }
 
 .container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
-  max-width: 500px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  max-width: 900px;
   margin: 50px auto;
   padding: 20px;
+  font-size: 1.2rem;
   background-color: #eee;
 }
 
-dt {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: .5rem;
-  
-}
-dt:not(:first-of-type) {
-  margin-top: 2rem;
+.container dl:not(:first-of-type) {
+  margin-top: 1rem;
 }
 
-input,
-textarea {
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  border-radius: .3rem;
+.container dt {
+  margin-bottom: .5em;
 }
 
-textarea {
-  resize: vertical;
+.container dd {
+  display: inline-block;
 }
 
-button {
-  display: block;
+.container dd:not(:first-of-type) {
+  margin-left: 2em;
+}
 
-  margin: 1rem auto 0;
-  padding: .5rem 1rem;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
+input {
+  display: none;
+}
+
+label {
+  position: relative;
+
+  padding-left: 1.5em;
+}
+
+input[type="checkbox"]+label::before,
+input[type="checkbox"]:checked+label::after,
+input[type="radio"]+label::before,
+input[type="radio"]:checked+label::after {
+  position: absolute;
+
+  display: inline-block;
+
+  content: "";
+  transition: .3s;
+}
+
+input[type="checkbox"]+label::before {
+  top: 50%;
+  transform: translateY(-50%);
+  left: .25em;
+
+  width: 1em;
+  height: 1em;
+  border: 2px solid #777;
+  border-radius: .2em;
+}
+
+input[type="checkbox"]:checked+label::before {
   background-color: #777;
-  border-radius: .3rem;
 }
 
+input[type="checkbox"]:checked+label::after {
+  top: .25em;
+  left: .55em;
 
+  width: .4em;
+  height: .7em;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+}
 
+input[type="radio"]+label::before {
+  top: 50%;
+  transform: translateY(-50%);
+  left: .25em;
+
+  width: 1em;
+  height: 1em;
+  border: 2px solid #777;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked+label::after {
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(1.5em / 3);
+
+  width: .5em;
+  height: .5em;
+  background-color: #777;
+  border-radius: 50%;
+}
