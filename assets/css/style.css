@@ -32,7 +32,3 @@ dt:not(:first-of-type) {
 input:not(:first-of-type) {
   margin-left: 1rem;
 }
-
-input[type="checkbox"]:checked + label { 
-  color: red;
-}
