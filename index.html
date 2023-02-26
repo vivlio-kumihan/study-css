@@ -10,45 +10,32 @@
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://kit.fontawesome.com/678cad97f5.js" crossorigin="anonymous"></script>
   <script src="./assets/js/behavior.js" defer></script>
 </head>
 
 <body>
-  <div class="container">
-    <dl>
-      <dt>WEB Applications</dt>
-      <dd>
-        <input type="checkbox" id="html">
-        <label for="html">HTML</label>
-      </dd>
-      <dd>
-        <input type="checkbox" id="css">
-        <label for="css">CSS</label>
-      </dd>
-      <dd>
-        <input type="checkbox" id="js">
-        <label for="js">JavaScript</label>
-      </dd>
-    </dl>
-    <dl>
-      <dt>JavaScript FlameWorks</dt>
-      <dd>
-        <input type="radio" id="vue" name="radio">
-        <label for="vue">Vue.js</label>
-      </dd>
-      <dd>
-        <input type="radio" id="nuxt" name="radio">
-        <label for="nuxt">Nuxt.js</label>
-      </dd>
-      <dd>
-        <input type="radio" id="react" name="radio">
-        <label for="react">React.js</label>
-      </dd>
-      <dd>
-        <input type="radio" id="next" name="radio">
-        <label for="next">Next.js</label>
-      </dd>
-    </dl>
-  </div>
+  <header>
+    <div class="container header-wrapper">
+      <a href="#" class="brand">kumihan.com</a>
+      <form action="" method="post" id="header-search">
+        <label for="search">サイト内検索</label>
+        <input type="search" name="header-search" id="search" placeholder="こちらに入力">
+      </form>
+      <nav class="header-nav">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">works</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </nav>
+      <button><a href="#" class="track">track</a></button>
+    </div>
+  </header>
+  <main>
+    <p>searchに何故Fontawesomeが適用されない。</p>
+  </main>
+  
 </body>
+
 </html>
