@@ -71,6 +71,16 @@ input[name="header-search"]::before {
   color: #333;
 }
 
+header button {
+  margin-left: 2rem;
+  padding: .5rem 1rem;
+  font-size: .9rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgb(60, 60, 255);
+  border-radius: .3rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
