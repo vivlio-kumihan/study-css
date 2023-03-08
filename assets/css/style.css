@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html {
-  font-size: 10px;
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 
@@ -12,7 +12,9 @@ body {
 
 #container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   
   width: 50rem;
   height: 100vh;
@@ -20,33 +22,36 @@ body {
   background-color: #eee;
 }
 
-/* flex-shrinkの説明 */
+.button {
+  margin-top: 10rem;
+  padding: .7rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+  background-color: #555;
+  border-radius: .3rem;
+}
+
 .box {
-  width: 100%;
-  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(20%);
+
+  margin-top: 2rem;
+  width: 30rem;
+  height: 7rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: .3rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
 }
 
-/* flex-growの説明 */
-/* .box {
-  width: 10%;
-  height: 10%;
-} */
-
-.blue {
-  /* flex-growの説明 */
-  /* flex-grow: 3; */
-  flex-shrink: 3;
-  background-color: rgb(65, 65, 255);
-}
-.orange {
-  /* flex-growの説明 */
-  /* flex-grow: 1; */
-  
-  /* flex-shrinkの説明 */
-  /* width: 100%;なら一つのbox分はみ出す。 */
-  /* デフォルトで設定されているflex-shrink: 1;で、 */
-  /* 1:1の比率で枠内に縮めるということ。 */
-  /* flex-shrink: 3;の分縮めるから小さくなる。 */
-  flex-shrink: 1;
-  background-color: orange;
+.box.active {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
 }
