@@ -11,63 +11,47 @@ body {
 }
 
 #container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
   max-width: 900px;
-  width: 100%;
-  /* センタリングさせるため */
-  margin: 4rem auto;
-  /* 領域を確保するため */
-  padding: 1rem;
-  background-color: #999;
-  border-radius: .3rem;
-}
-
-.test {
-  /* 移動　その2 */
-  /* フロートするから背景は領域が狭くなる。 */
-  /* position: fixed;
-  top: 15rem;
-  left: 15rem; */
-
-  width: 15rem;
-  height: 15rem;
-  background-color: #eee;
-
-  /* 移動　その1 */
-  /* transform: translate(15rem, 15rem); */
-
-  /* 回転 */
-  /* transform: rotate(60deg); */
-
-  /* 拡大 */
-  /* block特性を持たせたレイアウトの場合はセンター中心に拡大縮小 */
-  /* transform: scale(1.5); */
-
-  /* 歪み */
-  /* transform: skew(-16deg); */
-
-  /* 複数組み合わせる */
-  /* transform: rotate(60deg) skew(-60deg); */
-}
-
-/* 親要素に高さがないと破綻する。 */
-/* absolute, Fixedはレイアウトから浮いているから。 */
-/* #container {
-  max-width: calc(15px * 50);
   height: 100vh;
-  margin: 0 auto;
-  padding-top: 10rem ;
-  background-color: #eee; 
+  background-color: #eee;
 }
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.test {
-  margin: 0 auto;
-  width: 200px;
-  height: 200px;
+  width: 10rem;
+  height: 3rem;
+  /* padding: 1rem 2rem; */
   color: #fff;
-  background-color: #333 ;
-  transition: 1s;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #333;
+  border-radius: .3rem;
+  transition: .5s;
 }
 
-.test:hover {
-  transform: scale(1.1);
-} */
+a:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+/* コツ。ホバーの効果をPC版だけに限定する。 */
+@media screen and (min-width:769px) {
+  a:hover {
+    color: #777;
+    opacity: .3;
+  }
+  
+  .button2:hover {
+    color: rgb(242, 237, 88);
+    background-color: red;
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 4px #333;
+    opacity: .5;
+  } 
+}
