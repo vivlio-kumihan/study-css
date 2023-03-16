@@ -13,45 +13,41 @@ body {
 #container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   
   max-width: 900px;
   height: 100vh;
+  margin: 0 auto;
+  padding: 0 2rem;
   background-color: #eee;
 }
-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  width: 10rem;
-  height: 3rem;
-  /* padding: 1rem 2rem; */
-  color: #fff;
-  font-weight: 900;
-  text-transform: uppercase;
-  background-color: #333;
-  border-radius: .3rem;
-  transition: .5s;
-}
-
-a:not(:first-of-type) {
+#app {
   margin-top: 2rem;
 }
 
-/* コツ。ホバーの効果をPC版だけに限定する。 */
-@media screen and (min-width:769px) {
-  a:hover {
-    color: #777;
-    opacity: .3;
-  }
-  
-  .button2:hover {
-    color: rgb(242, 237, 88);
-    background-color: red;
-    transform: translateY(-2px);
-    box-shadow: 2px 2px 4px #333;
-    opacity: .5;
-  } 
+.row {
+  display: flex;
+  align-items: flex-start;
+
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: .3rem;
+}
+
+.row:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+.row > dt {
+  flex: 1;
+  padding-right: 1rem;
+  text-align: right;
+}
+
+.row > dd {
+  flex: 4;
+  padding-left: 1rem;
+  border-left: 1px solid #333;
 }
