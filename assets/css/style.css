@@ -10,35 +10,29 @@ html {
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  line-height: 1.7;
+  font-size: 1rem;
   color: #555;
 }
 
-.container {
-  display: grid;
-  align-content: center;
-  gap: 15px;
-  width: min(100%, 1050px);
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 600px;
   height: 100vh;
   margin: 0 auto;
-  padding: 0 15px;
+  padding-left: 1.5rem;
+  background-color: #eee;
 }
 
 p {
   display: inline-block;
-  position: relative;
-  margin-left: 20px;
-  font-size: 15px;
-  line-height: 1.2;
-}
-
-p::after {
-  position: absolute;
-  top: 0;
-  left: -20px;
-  content: "\f015";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  margin: .5rem 0;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 /* 間に何を挟んでいてもその存在はないことにして後続の要素に効果をつける */
@@ -50,25 +44,13 @@ p::after {
 
 /* 間に何を挟んでいようが、最初のpを見つけてそれ以降のpには効果をつける */
 /* つまり最初のpだけにしか効果はつかない。 */
-p:not(:first-of-type) {
+/* p:not(:first-of-type) {
   margin-left: 60px;
   color: red;
-}
+} */
 
 /* 同じ挙動 最初以降の要素に対して効果をつける */
 p:nth-of-type(n+2) {
   margin-left: 60px;
   color: red;
-}
-
-p:nth-of-type(2)::after {
-  content: "\f002";
-}
-
-p:nth-of-type(3)::after {
-  content: "\f019";
-}
-
-p:nth-of-type(n+4)::after {
-  content: "\f083";
 }
