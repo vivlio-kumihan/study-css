@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap');
+
 html {
   /* 本文15px */
   font-size: 93.75%;
@@ -9,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   font-weight: 500;
@@ -35,9 +36,9 @@ body {
   animation-name: move-in;
   animation-duration: 4s;
   animation-fill-mode: forwards;
-}
-.frame img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 @keyframes move-in {
@@ -47,8 +48,8 @@ body {
     transform: translateX(100%);
   }
   50% {
-    visibility: visible;
-    opacity: 15%;
+    visibility: visible; 
+    opacity:15%;
   }
   100% {
     transform: translateX(0);
@@ -56,33 +57,34 @@ body {
     opacity: 1;
   }
 }
+
 .wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-.wrapper:nth-of-type(n+2) {
-  margin-top: 1rem;
+  &:nth-of-type(n+2) {
+    margin-top: 1rem;
+  }
 }
 
 dl {
   margin-left: 3rem;
-}
-dl dt, dl dd {
-  margin-right: 1rem;
-}
-dl dt {
-  flex: 1;
-}
-dl dd {
-  flex: 9;
+  dt, dd {
+    margin-right: 1rem;
+  }
+  dt {
+    flex: 1;
+  }
+  dd {
+    flex: 9;
+  }
 }
 
 code {
   background-color: #ddd;
-  padding: 0 0.5rem;
+  padding: 0 .5rem;
   font-weight: 700;
+  &:nth-of-type(n+2) {
+    margin: 0 .5rem;
+  }
 }
-code:nth-of-type(n+2) {
-  margin: 0 0.5rem;
-}/*# sourceMappingURL=style.css.map */

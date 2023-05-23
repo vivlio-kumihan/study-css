@@ -14,33 +14,26 @@
 </head>
 
 <body>
-  <!-- 疑問点 HTMLCollectionはforEachで読めない？ -->
-  <!-- <header id="for-sp-menu-switch">
-    <button href="" id="header-menu-button">
-      <figure class="btn-line"></figure>
-      <figure class="btn-line"></figure>
-      <figure class="btn-line"></figure>
-    </button>
-  </header> -->
-
-  <!-- 確認 + と p:nth-of-type(n+2) -->
-  <div id="container">
-    <p>hello1-1</p>
-    <div class="wrapper">
-      <p>hello2-1</p>
-      <p>hello2-2</p>
-      <p>hello2-3</p>
+  <div class="container">
+    <dl>
       <div class="wrapper">
-        <p>hello3-1</p>
-        <p>hello3-2</p>
-        <p>hello3-3</p>
+        <dt>point1</dt>
+        <dd>X軸方向に移動させる要素のラッパーに<code>overflow: hidden;</code></dd>
       </div>
-      <p>hello2-4</p>
-      <p>hello2-5</p>
-      <p>hello2-6</p>
-    </div>
-    <p>hello1-2</p>
-    <p>hello1-3</p>
-    <p>hello1-4</p>
+      <div class="wrapper">
+        <dt>point2</dt>
+        <dd>
+          <code>@keyframes</code>設定で必須の属性
+          <code>animation-name</code>, 
+          <code>animation-duration</code>, 
+          <code>animation-fill-mode: forwards;</code>
+        </dd>
+      </div>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+    <div class="frame"><img src="./assets/img/cover.jpg" alt=""></div>
   </div>
 </body>
+
+</html>
